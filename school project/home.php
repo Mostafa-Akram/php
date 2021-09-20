@@ -16,7 +16,7 @@
     }
     #mother
      {
-         width:100%
+         width:100%;
          font-size:20px;
          font-family: 'Hina Mincho', serif;
     }
