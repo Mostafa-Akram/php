@@ -22,14 +22,14 @@
 
    
     <label>
-        <input type="text" class="input" name="username" placeholder="ENTER USERNAME"/>
+        <input type="text" class="input" name="username" placeholder="ENTER USERNAME" value="<?php echo $username ?>"/>
         <div class="line-box">
           <div class="line"></div>
         </div>
     </label>
 
     <label>
-      <input type="text" class="input" name="email" placeholder="ENTER EMAIL"/>
+      <input type="text" class="input" name="email" placeholder="ENTER EMAIL" value="<?php echo $email ?>" />
         <div class="line-box">
           <div class="line"></div>
         </div>

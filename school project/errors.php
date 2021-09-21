@@ -1,19 +1,15 @@
 <?php if (count($errors) > 0): ?>
-<?php
 
-$data = $_POST;
+    <div class="error">
 
-if (empty($data['username']) ||
-    empty($data['password_1']) ||
-    empty($data['email']) ||
-    empty($data['password_2'])) {
-    
-    die('Please fill all required fields!');
-}
+    <?php foreach ($errors as $error): ?>
 
-if ($data['password_1'] !== $data['password_2']) {
-   die('Password and Confirm password should match!');   
-}
-?>
+        <p> <?php echo $error; ?> </p>
+        
+    <?php endforeach ?>
+
+
+    </div>
+
 
 <?php endif ?>

@@ -1,3 +1,5 @@
+<?php include('server.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,7 +125,7 @@
 </head>
 <body>
      <div id='mother'>
-         <form method='post'>
+         <form method='post' name="home">
         
         <!-- control screen -->
          <aside>

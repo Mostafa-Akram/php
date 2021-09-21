@@ -70,6 +70,7 @@ label {
   top: -3em;
 }
 
+
 button {
   display: inline-block;
   padding: 12px 24px;
@@ -87,6 +88,15 @@ button:hover {
   background: #8BC34A;
   color: #ffffff;
 } 
+
+.error
+{
+  color: #ba3939;
+  background: #ffe0e0;
+  border: 1px solid #a33a3a;
+}
+
+
 /* 
 button:disabled {
   cursor: not-allowed;

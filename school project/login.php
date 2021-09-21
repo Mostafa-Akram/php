@@ -1,3 +1,5 @@
+<?php include('server.php');?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,11 +13,14 @@
 
 <div>
   
-  <form>
+  <form method="post" action="login.php">
+          <!--display validation -->
+          <?php include('errors.php');?>
+
     <h4 class="text-warning text-center pt-5">login Page</h4>
 
     <label>
-      <input type="text" class="input" name="email" placeholder="ENTER EMAIL"/>
+      <input type="text" class="input" name="username" placeholder="ENTER username"/>
         <div class="line-box">
           <div class="line"></div>
         </div>
@@ -30,7 +35,7 @@
     </label>
 
   
-    <button type="submit">submit</button>
+    <button type="submit" name="login" class="btn">submit</button>
     
     <p>   
       Not yet a member? <a href="register.php"> sign up </a>
