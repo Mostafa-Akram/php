@@ -1,4 +1,4 @@
-
+<?php if (count($errors) > 0): ?>
 <?php
 
 $data = $_POST;
@@ -15,3 +15,5 @@ if ($data['password_1'] !== $data['password_2']) {
    die('Password and Confirm password should match!');   
 }
 ?>
+
+<?php endif ?>

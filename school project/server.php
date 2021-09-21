@@ -10,16 +10,15 @@ $db = mysqli_connect("localhost" , "root" , "" , "registration" );
 
 // if the register btn clicked 
 
-if(isset($_POST['register']))
+if(isset($_POST['register'])) 
 {
     $username =   ($_POST['username']);
     $email    =  ($_POST['email']);
     $password_1 =  ($_POST['password_1']);
     $password_2 =  ($_POST['password_2']);
 
-    if(empty($username))
-    {
-        array_push($errors,"user name is required");
+    if (empty($username)) {
+        array_push($errors, "user name is required");
     }
 
     if(empty($email))

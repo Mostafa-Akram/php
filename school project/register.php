@@ -16,7 +16,7 @@
   
   <form method="post" action="register.php">
     
-    <?php include('errors.php'); ?>
+  <?php include('errors.php'); ?>
 
     <h4 class="text-warning text-center pt-5">Registration Page</h4>
 
@@ -54,7 +54,7 @@
     <p>   
       Already member? <a href="login.php"> sign in </a>
     </p>
-
+    
   </form>
 </div>
  </body>
