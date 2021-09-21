@@ -44,9 +44,7 @@ if(isset($_POST['register']))
         $sql = "INSERT INTO users (username, email, password)
                 VALUES ('$username','$email','$password')";
                 mysqli_query($db,$sql);
-                $_SESSION['username'] = $username;
-                $_SESSION['success'] = "you are login";
-                header('location: home.php');
+              
     }
 
 
@@ -78,7 +76,24 @@ if(isset($_POST['login']))
     if(mysqli_num_rows($result) == 1)
     {
         $_SESSION['username'] = $username;
-        $_SESSION['success'] = "you are login";
+        $_SESSION['success'] = time();                      //taking now logged in time
+        $_SESSION['expire'] = $_SESSION['start'] + (1*60);  //ending a session in 1 minute from starting time 
+
+        
+
+
+ 
+    if(isset($_POST["Login"])) {
+    
+        // Session Variables are created
+        $_SESSION["user"] = $username;  
+    
+        // Login time is stored in a session variable
+        $_SESSION["login_time_stamp"] = time(); 
+        header("Location:home.php");
+    }
+
+
         header('location: home.php');
 
     }else

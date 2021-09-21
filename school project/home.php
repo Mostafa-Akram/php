@@ -75,6 +75,8 @@
     <?php
 
 
+
+
     //connecting with data base 
 
         $host='localhost';
@@ -116,6 +118,23 @@
                 header("location: home.php");
             }
 
+            if(!isset($_SESSION['user']))
+            {
+                echo "<p align = 'center'> please login again ";
+                echo "<a href = 'login.php' > click here to login </a> </p> ";
+            }
+            else
+            {
+                $now = time();
+                //checking the time
+                if ($now > $_SESSION['expire'])
+                {
+                    session_destroy();
+                    echo "<p align = 'center'> your session has expire ! ";
+                    echo "<a href = 'login.php' > login here </a> </p> ";
+                }
+            }
+
 
 
 
@@ -141,7 +160,9 @@
             <input type ='text' name='adress' id='adress'><br><br>
             <button name='add'>add student</button> <br>
             <button name='remove'>remove student</button><br>
-            <button name='edit'>edit student</button> <br>         
+            <button name='edit'>edit student</button> <br>     
+            <h3> <a href="login.php" style= "color : red" >logout</a> </h3>
+
 
         
             </div>
